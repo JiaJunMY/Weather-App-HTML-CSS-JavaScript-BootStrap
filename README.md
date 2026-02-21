@@ -1,10 +1,10 @@
 # Weather-App-HTML-CSS-JavaScript-BootStrap
 A weather app made with HTML, CSS, JavaScript &amp; BootStrap 5.3.8.
 
-Inspired by Bro Code weather application video! (Huge thanks to him for helping out)
+Inspired by Bro Code weather application video! (Huge thanks to him for helping out) </br>
 https://www.youtube.com/watch?v=VaDUGPMjzOM
 
-(If you want to try this out, you'll need to get your own APIkey from OpenWeather and place it in 'index.js' line 5.)
+(If you want to try this out, you'll need to get your own APIkey from OpenWeather and place it in 'index.js' line 5.) </br>
 Link here: -> https://openweathermap.org/ <-
 
 Features:
