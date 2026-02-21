@@ -1,0 +1,134 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Application Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="background">
+        <div class="mainPage">
+            <h1 class="titleCaption">Weather Application</h1>
+        </div>
+
+        <div class="formSection">
+            <form id="weatherForm">
+                <input type="text" class="cityInput" id="cityInput" placeholder="Tokyo">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="tipSection">
+            <p><span>💡Tip:</span> Enter any city name (Example: Arizona, New York) and click 'Submit.'</p>
+        </div>
+
+        <div class="temperatureSection row justify-content-center gap-2" style="display: none">
+            <div class="card col-12 col-sm-5 col-md-5 col-lg-5">
+                <div class="card-body">
+                    <h1>🌡️</h1>
+                    <h5>Temperature</h5>
+                    <p class="mt-5">Current Temperature:</p>
+                    <p class="currentTemp" id="currentTemp">21℃</p>
+                    <div class="row">
+                        <div class="col-6 mt-3">
+                            <p>Min:</p>
+                            <p class="minTemp" id="minTemp">19℃</p>
+                        </div>
+                        <div class="col-6 mt-3">
+                            <p>Max:</p>
+                            <p class="maxTemp" id="maxTemp">23℃</p>
+                        </div>
+                    </div>
+
+                    <h5 class="mt-5">Temperature Selection</h5>
+                    <div class="d-flex justify-content-center gap-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="kelvin" value="kelvin" name="temperature" checked>
+                            <label for="kelvin">K</label> 
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input ms-1" type="radio" id="celcius" value="celcius" name="temperature">
+                            <label for="celcius">℃</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input ms-1" type="radio" id="fahrenheit" value="fahrenheit" name="temperature">
+                            <label for="fahrenheit">℉</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="humiditySection card col-12 col-sm-5 col-md-5 col-lg-5" style="display: non">
+                <div class="card-body">
+                    <h1>💧</h1>
+                    <h5>Humidity</h5>
+                    <p class="mt-5">Current Humidity:</p>
+                    <p class="currentHumidity" id="currentHumidity">72%</p>
+                    <div class="row">
+                        <div class="col-6 mt-3">
+                            <p>Clouds:</p>
+                            <p class="cloudsDisplay" id="clouds">60%</p>
+                        </div>
+                        <div class="col-6 mt-3">
+                            <p>Wind:</p>
+                            <p class="windsDisplay" id="winds">5 m/s</p>
+                        </div>
+                        <div class="col-6 mt-3">
+                            <p>Visibility:</p>
+                            <p class="visibilityDisplay" id="visibility">10 km</p>
+                        </div>
+                        <div class="col-6 mt-3">
+                            <p>Rain:</p>
+                            <p class="rainDisplay" id="rain">2 mm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="weeklyForecastSection card col-12 col-sm-10 col-md-10 col-lg-10" style="display: none">
+                <div class="card-body">
+                    <h1>📆</h1>
+                    <h5>5 Days Forecast </h5>
+
+                    <div class="row mt-5 justify-content-center gap-3">
+                        <div class="card-weekly col-5 col-sm-5 col-md-3 col-lg-2">
+                            <h5 class="weekDay">Monday</h5>
+                            <p class="weeklyCurrentTemp">14℃</p>
+                            <p class="weeklyMinMaxTemp">15℃ / 13℃></p>
+                            <h1 class="weeklyEmoji">⛅</h1>
+                        </div>
+                        <div class="card-weekly col-5 col-sm-5 col-md-4 col-lg-2">
+                            <h5 class="weekDay">Tuesday</h5>
+                            <p class="weeklyCurrentTemp">14℃</p>
+                            <p class="weeklyMinMaxTemp">15℃ / 13℃</p>
+                            <h1 class="weeklyEmoji">🌧️</h1>
+                        </div>
+                        <div class="card-weekly col-5 col-sm-5 col-md-3 col-lg-2">
+                            <h5 class="weekDay">Wednesday</h5>
+                            <p class="weeklyCurrentTemp">14℃</p>
+                            <p class="weeklyMinMaxTemp">15℃ / 13℃</p>
+                            <h1 class="weeklyEmoji">☀️</h1>
+                        </div>
+                        <div class="card-weekly col-5 col-sm-5 col-md-4 col-lg-2">
+                            <h5 class="weekDay">Thursday</h5>
+                            <p class="weeklyCurrentTemp">14℃</p>
+                            <p class="weeklyMinMaxTemp">15℃ / 13℃</p>
+                            <h1 class="weeklyEmoji">☀️</h1>
+                        </div>
+                        <div class="card-weekly col-5 col-sm-5 col-md-4 col-lg-2">
+                            <h5 class="weekDay">Friday</h5>
+                            <p class="weeklyCurrentTemp">14℃</p>
+                            <p class="weeklyMinMaxTemp">15℃ / 13℃</p>
+                            <h1 class="weeklyEmoji">❄️</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

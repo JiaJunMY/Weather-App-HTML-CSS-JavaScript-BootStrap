@@ -1,0 +1,157 @@
+body {
+    background-image: url(assets/weatherBackground.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.background {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.512) 0%, #91e7ff7a 25%, #1cb5e07c 50%, #00085181 100%);
+    width: 95%;
+    max-width: 1200px;
+    height: fit-content;
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 1rem;
+}
+
+.mainPage {
+    padding: 10px;
+}
+
+.mainPage .titleCaption {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* tip section */
+.tipSection {
+    background-color: rgb(15, 94, 37);
+    padding: 25px 15px 10px 15px;
+    border-radius: 25px;
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+    max-width: 800px;
+    font-size: 20px;
+    box-shadow: 2px 2px 5px black;
+    margin-bottom: 10px;
+}
+
+.tipSection span {
+    font-weight: bold;
+}
+
+.tipSection p {
+    font-weight: normal;
+}
+
+/* form section */
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    width: 100%;
+    margin: 30px 0 30px 0;
+    gap: 20px;
+}
+
+.formSection {
+    margin-bottom: 30px;
+}
+
+.formSection .cityInput {
+    width: 100%;
+    max-width: 500px;
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 25px;
+    background-color: #fff7ed;
+    color: #7c2d12;
+    border: none;
+    box-shadow: 2px 2px 5px black;
+    outline: none;
+}
+
+.formSection .cityInput::placeholder {
+    color: rgb(177, 177, 177);
+}
+
+.formSection button[type="submit"] {
+    background-color: #f97316;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    padding: 10px 25px 10px 25px;
+    box-shadow: 2px 2px 5px black;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 0px;
+    max-width: 150px;
+    width: 100%;
+}
+
+.formSection button[type="submit"]:hover {
+    background-color: #ea580c;
+}
+
+@media (max-width: 600px) {
+    form {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .cityInput {
+        width: 100%;
+    }
+
+    form button {
+        width: 100%;
+    }
+}
+
+/* card section */
+.card {
+    background-color: rgb(21, 134, 53) !important;
+    border: 0;
+    box-shadow: 2px 2px 5px black;
+    text-align: center;
+}
+
+.card-body {
+    color: white !important;
+    margin: 10px 0;
+}
+
+.currentTemp, .minTemp, .maxTemp, .currentHumidity, .cloudsDisplay, .windsDisplay, .visibilityDisplay, .rainDisplay, .weeklyCurrentTemp {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.form-check input[type="radio"] {
+    background-color: rgb(0, 29, 0);
+    font-size: 30px;
+    border: 0px;
+}
+
+.form-check label {
+    font-size: 30px;
+    margin-left: 2px;
+}
+
+.form-check input[type="radio"]:checked {
+    background-color: rgb(0, 0, 0);
+}
+
+.card-weekly {
+    border-radius: 10px;
+    background-color: rgb(15, 94, 37);
+    box-shadow: 2px 2px 5px black;
+    padding: 20px;
+}
