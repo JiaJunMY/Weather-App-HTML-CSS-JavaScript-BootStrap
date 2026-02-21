@@ -5,6 +5,7 @@ Inspired by Bro Code weather application video! (Huge thanks to him for helping 
 https://www.youtube.com/watch?v=VaDUGPMjzOM
 
 (If you want to try this out, you'll need to get your own APIkey from OpenWeather and place it in 'index.js' line 5.)
+Link here: -> https://openweathermap.org/ <-
 
 Features:
 - Temperature (Current, Min & Max), and different temperature selection (Kelvin, Celcius, Fahrenheit)
